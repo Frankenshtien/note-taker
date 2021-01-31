@@ -32,6 +32,15 @@ app.post("/api/notes", (req, res) => {
   res.json(notes);
 });
 
+app.delete("/api/notes:id", (req, res) => {
+  console.log(req.body);
+  // for (i = 0; i < notes.length; i++) {
+  //   if (req.body.id === notes[i].id) {
+  //     res.send("file deletes");
+  //     }
+  //   }
+});
+
 app.listen(PORT, () => {
   console.log(`Server now live on port ${PORT}!`);
 });
